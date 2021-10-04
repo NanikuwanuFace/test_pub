@@ -1,10 +1,10 @@
-# 01_ä¸ç¢ºå®Ÿæ€§####
+# 01_•sŠmÀ«####
 
-#ä½œæ¥­ç’°å¢ƒã®å¤‰æ›´####
+#ì‹ÆŠÂ‹«‚Ì•ÏX####
 getwd()
 setwd("D:/github/loacal_test_repo/R/BDS/examples")
 
-# ãƒ‡ãƒ¼ã‚¿ã‚¤ãƒ³ãƒãƒ¼ãƒˆ####
+# ƒf[ƒ^ƒCƒ“ƒ|[ƒg####
 trucks <- read.csv("pickup.csv")
 head(trucks)
 
@@ -12,17 +12,17 @@ browser <- read.csv("web-browsers.csv")
 dim(browser)
 head(browser)
 ###################################################
-# å¹³å‡####
+# •½‹Ï####
 mean(browser$spend)
 hist(browser$spend, breaks = 1000,xlim=c(0,20000))
 
-# æ¨™æœ¬åˆ†æ•£####
+# •W–{•ªU####
 br_n = nrow(browser)
 var(browser$spend)/br_n
 
-# ãƒãƒ³ãƒ‘ãƒ©ãƒ¡ãƒˆãƒªãƒƒã‚¯ãƒ–ãƒ¼ãƒˆã‚¹ãƒˆãƒ©ãƒƒãƒ—####
-B <- 1000 # ãƒ–ãƒ¼ãƒˆã‚¹ãƒˆãƒ©ãƒƒãƒ—å›æ•°
-mub <- c() # æ¨™æœ¬å¹³å‡ãƒ™ã‚¯ãƒˆãƒ«
+# ƒmƒ“ƒpƒ‰ƒƒgƒŠƒbƒNƒu[ƒgƒXƒgƒ‰ƒbƒv####
+B <- 1000 # ƒu[ƒgƒXƒgƒ‰ƒbƒv‰ñ”
+mub <- c() # •W–{•½‹ÏƒxƒNƒgƒ‹
 for (b in 1:B){
   samp_b <- sample.int((nrow(browser)), replace=TRUE)
   mub <- c(mub, mean(browser$spend[samp_b]))
